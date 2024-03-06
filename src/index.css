@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1{
+  text-align: center;
+}
+nav{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: palevioletred;
+  gap: 10px;
+}
+
+a{
+  text-decoration: none;
+}
+
+a.active{
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+}
