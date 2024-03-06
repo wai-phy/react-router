@@ -1,19 +1,14 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
 import Main from "./layouts/Main";
-import Products from "./pages/Products";
-import Error from "./components/Error";
-import Product from "./components/Product";
+import { Home, About, Products, ProductDetails } from "./pages/index";
 
 const router = createBrowserRouter([
   {
-    path: "",
+    path: "/",
     element: <Main />,
-    errorElement: <Error />,
     children: [
       {
-        path: "/",
+        index: true,
         element: <Home />,
       },
       {
@@ -25,18 +20,18 @@ const router = createBrowserRouter([
         element: <Products />,
       },
       {
-        path: "/product/:id",
-        element: <Product />,
+        path: "/product/:title",
+        element: <ProductDetails />,
       },
     ],
   },
 ]);
-function App() {
+const App = () => {
   return (
     <>
       <RouterProvider router={router} />
     </>
   );
-}
+};
 
 export default App;
