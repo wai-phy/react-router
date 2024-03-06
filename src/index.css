@@ -32,3 +32,9 @@ a.active{
   font-weight: 500;
   font-style: italic;
 }
+
+button{
+  text-align: center;
+  justify-self: center;
+  margin: 20px auto;
+}
